@@ -43,26 +43,36 @@
         
 
 
-        <table class="nav-justified">
+        <table class="nav-justified" style="width: 96%">
             <tr>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Order Number</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Client Name</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Organisation</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Phone number</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Action Required</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Urgent</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Status</td>
-                <td class="modal-sm" style="border-top-style: ridge; border-spacing: -4mm;">Date</td>
+                <td style="border-style: solid; border-width: 1px;">Order Number</td>
+                <td style="border-style: solid; border-width: 1px;">Action Required</td>
+                <td style="border-style: solid; border-width: 1px;">Urgent</td>
+                <td style="border-style: solid; border-width: 1px;">Priority</td>
+                <td style="border-style: solid; border-width: 1px;">Status</td>
+                <td style="border-style: solid; border-width: 1px;">Action Description</td>
+                <td style="border-style: solid; border-width: 1px; width: 108px;">Payment Status</td>
+                <td style="border-style: solid; border-width: 1px;">Cost</td>
+                <td style="border-style: solid; border-width: 1px;">Tracking Number</td>
+                <td style="border-style: solid; border-width: 1px;">Client Name</td>
+                <td style="border-style: solid; border-width: 1px;">Organisation</td>
+                <td style="border-style: solid; border-width: 1px;">Phone number</td>
+                <td class="modal-sm" style="border-style: solid; border-width: 1px;">Date</td>
             </tr>
             <tr>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">1</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">John</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">LIGO</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">0412345678</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">True</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">True</td>
-                <td style="border-top-style: ridge; border-spacing: -4mm;">Complete</td>
-                <td class="modal-sm" style="border-top-style: ridge; border-spacing: -4mm;">21/08/2021</td>
+                <td style="border-style: solid; border-width: 1px;">1</td>
+                <td style="border-style: solid; border-width: 1px;">True</td>
+                <td style="border-style: solid; border-width: 1px;">True</td>
+                <td style="border-style: solid; border-width: 1px;">1</td>
+                <td style="border-style: solid; border-width: 1px;">Complete</td>
+                <td style="border-style: solid; border-width: 1px;">All done</td>
+                <td style="border-style: solid; border-width: 1px; width: 108px;">Received</td>
+                <td style="border-style: solid; border-width: 1px;">4600</td>
+                <td style="border-style: solid; border-width: 1px;">R43E9udb</td>
+                <td style="border-style: solid; border-width: 1px;">John</td>
+                <td style="border-style: solid; border-width: 1px;">LIGO</td>
+                <td style="border-style: solid; border-width: 1px;">0412345678</td>
+                <td class="modal-sm" style="border-style: solid; border-width: 1px;">21/08/2021</td>
             </tr>
         </table>
         
