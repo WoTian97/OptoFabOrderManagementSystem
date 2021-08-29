@@ -100,3 +100,13 @@ C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\obj\Debug\OptoO
 C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\obj\Debug\OptoOrderManagement.csproj.CopyComplete
 C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\obj\Debug\OptoOrderManagement.dll
 C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\obj\Debug\OptoOrderManagement.pdb
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\MySqlConnector.dll
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Buffers.dll
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Memory.dll
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\MySqlConnector.xml
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Buffers.xml
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Memory.xml
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Wo\source\repos\OptoOrderManagement\OptoOrderManagement\bin\System.Threading.Tasks.Extensions.xml
