@@ -18,42 +18,31 @@ namespace OptoOrderManagement
 
             if (!this.IsPostBack)
             {
-                string constr = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
-                using (MySqlConnection con = new MySqlConnection(constr))
+                LoadRecord();
+            }
+            
+        }
+        string constr = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+        void LoadRecord()
+        {
+            using (MySqlConnection con = new MySqlConnection(constr))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM Orders"))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM Orders"))
+                    using (MySqlDataAdapter da = new MySqlDataAdapter())
                     {
-                        using (MySqlDataAdapter da = new MySqlDataAdapter())
+                        cmd.Connection = con;
+                        da.SelectCommand = cmd;
+                        using (DataTable dt = new DataTable())
                         {
-                            cmd.Connection = con;
-                            da.SelectCommand = cmd;
-                            using (DataTable dt = new DataTable())
-                            {
-                                da.Fill(dt);
-                                GridView1.DataSource = dt;
-                                GridView1.DataBind();
-                            }
+                            da.Fill(dt);
+                            GridView1.DataSource = dt;
+                            GridView1.DataBind();
                         }
                     }
                 }
             }
-            //LoadRecord();
-
         }
-
- /*       MySqlConnection con = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=optofab");
-        void LoadRecord()
-        {
-            con.Open();
-            MySqlCommand comm = new MySqlCommand("select * from orders", con);
-            MySqlDataAdapter d = new MySqlDataAdapter(comm);
-            DataTable dt = new DataTable();
-            d.Fill(dt);
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-            con.Close();
-        }
- */
 
 
     }
