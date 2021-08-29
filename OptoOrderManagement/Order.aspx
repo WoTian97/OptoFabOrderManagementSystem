@@ -140,13 +140,60 @@
                 <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine"></asp:TextBox>
             </td>
         </tr>
+        </table>
+    </h3>
+
+    <h3>&nbsp;<table class="nav-justified">
         <tr>
-            <td style="width: 181px">&nbsp;</td>
-            <td class="modal-sm" style="width: 296px">&nbsp;</td>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px; font-weight: bold;">Customer information</td>
             <td>&nbsp;</td>
         </tr>
-    </table>
-    </h3>
+        <tr>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px; font-weight: bold;">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px">First name</td>
+            <td>
+                <asp:TextBox ID="TextBox24" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px">Last name</td>
+            <td>
+                <asp:TextBox ID="TextBox25" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px">Company name</td>
+            <td>
+                <asp:TextBox ID="TextBox26" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px">Email</td>
+            <td>
+                <asp:TextBox ID="TextBox27" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 183px">&nbsp;</td>
+            <td class="modal-sm" style="width: 295px">Phone</td>
+            <td>
+                <asp:TextBox ID="TextBox28" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        </table>
+        <table class="nav-justified">
+
+            <table class="nav-justified">
+            </table>
 
     <h3>&nbsp;<table class="nav-justified">
         <tr>
