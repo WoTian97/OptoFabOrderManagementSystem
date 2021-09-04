@@ -30,7 +30,7 @@ create table Orders (
 	phone_number varchar(20),
 	shipping_address_id int references Address(id),
 	billing_address_id int references Address(id),
-	date datetime
+	order_date datetime
 );
 
 create table Geometry (
