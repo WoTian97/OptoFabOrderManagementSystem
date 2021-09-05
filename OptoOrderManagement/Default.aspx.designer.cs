@@ -15,13 +15,13 @@ namespace OptoOrderManagement
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// TextBoxSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearch;
 
         /// <summary>
         /// DropDownSearch control.
@@ -42,13 +42,22 @@ namespace OptoOrderManagement
         protected global::System.Web.UI.WebControls.Button ButtonSearch;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// ButtonFuzzy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Button ButtonFuzzy;
+
+        /// <summary>
+        /// DropDownSort control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownSort;
 
         /// <summary>
         /// ButtonSort control.

@@ -18,16 +18,17 @@ namespace OptoOrderManagement
 
             if (!this.IsPostBack)
             {
-                LoadRecord();
+                String s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
+                LoadRecord(s);
             }
             
         }
         string constr = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
-        void LoadRecord()
+        void LoadRecord(String para_sql)
         {
             using (MySqlConnection con = new MySqlConnection(constr))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM Orders"))
+                using (MySqlCommand cmd = new MySqlCommand(para_sql))
                 {
                     using (MySqlDataAdapter da = new MySqlDataAdapter())
                     {
@@ -44,6 +45,117 @@ namespace OptoOrderManagement
             }
         }
 
+        protected void ButtonSort_Click(object sender, EventArgs e)
+        {
+            String str = DropDownSort.Items[DropDownSort.SelectedIndex].Value;
+            String s = "";
+            switch (str)
+            {
+         
+                case "Order Number":
+                    s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
+                    break;
 
+                case "Action Required":
+                    s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders ORDER BY action_required DESC";
+                    break;
+
+                case "Urgent":
+                    s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders ORDER BY urgent DESC";
+                    break;
+
+                case "Status":
+                    s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders ORDER BY status";
+                    break;
+
+                case "Date":
+                    s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders ORDER BY order_date";
+                    break;
+
+                default:
+                    s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
+                    break;
+            }
+            LoadRecord(s);
+        }
+
+        protected void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            String ddStr = DropDownSearch.Items[DropDownSearch.SelectedIndex].Value;
+            String searchBy = TextBoxSearch.Text;
+            String s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
+            String temp = "";
+            switch (ddStr)
+            {
+
+                case "Order Number":
+                    temp = s+" WHERE id = "+searchBy;
+                    break;
+
+                case "Client First Name":
+                    temp = s + " WHERE first_name = '" + searchBy+"'";
+                    break;
+
+                case "Client Last Name":
+                    temp = s + " WHERE last_name = '" + searchBy + "'";
+                    break;
+
+                case "Organisation":
+                    temp = s + " WHERE company_name = '" + searchBy + "'";
+                    break;
+
+                case "Phone Number":
+                    temp = s + " WHERE phone_number = '" + searchBy + "'";
+                    break;
+
+                case "Status":
+                    temp = s + " WHERE o_status = '" + searchBy + "'";
+                    break;
+
+                default:
+                    break;
+            }
+            LoadRecord(temp);
+
+        }
+
+        protected void ButtonFuzzy_Click(object sender, EventArgs e)
+        {
+            String ddStr = DropDownSearch.Items[DropDownSearch.SelectedIndex].Value;
+            String searchBy = TextBoxSearch.Text;
+            String s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
+            String temp = "";
+            switch (ddStr)
+            {
+
+                case "Order Number":
+                    temp = s + " WHERE id LIKE '%" + searchBy + "%'";
+                    break;
+
+                case "Client First Name":
+                    temp = s + " WHERE first_name LIKE '%" + searchBy + "%'";
+                    break;
+
+                case "Client Last Name":
+                    temp = s + " WHERE last_name LIKE '%" + searchBy + "%'";
+                    break;
+
+                case "Organisation":
+                    temp = s + " WHERE company_name LIKE '%" + searchBy + "%'";
+                    break;
+
+                case "Phone Number":
+                    temp = s + " WHERE phone_number LIKE '%" + searchBy + "%'";
+                    break;
+
+                case "Status":
+                    temp = s + " WHERE o_status LIKE '%" + searchBy + "%'";
+                    break;
+
+                default:
+                    break;
+            }
+            LoadRecord(temp);
+        }
     }
 }
