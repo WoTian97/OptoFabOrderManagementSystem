@@ -14,8 +14,8 @@ create table Address (
 
 create table Orders (
 	id int primary key,
-	action_required bit,
-	urgent bit,
+	action_required VARCHAR(10),
+	urgent VARCHAR(10),
 	o_priority int,
 	o_status varchar(50),
 	action_description varchar(1000),
@@ -90,8 +90,8 @@ create table Part (
 	order_id int references Orders(id),
 	SPDT_id int references SPDT(id),
 	optical_id int references Optical_Or_Photonic(id),
-	action_required bit,
-	urgent bit,
+	action_required VARCHAR(10),
+	urgent VARCHAR(10),
 	p_priority int,
 	p_status varchar(20),
 	part_description varchar(100)
