@@ -17,14 +17,14 @@ create table Orders (
 	action_required bit,
 	urgent bit,
 	o_priority int,
-	o_status varchar(20),
-	action_description varchar(100),
-	payment_status varchar(20),
+	o_status varchar(50),
+	action_description varchar(1000),
+	payment_status varchar(50),
 	cost float,
 	tracking_number varchar(20),
-	order_description varchar(100),
-	first_name varchar(20),
-	last_name varchar(20),
+	order_description varchar(1000),
+	first_name varchar(50),
+	last_name varchar(50),
 	company_name varchar(50),
 	email varchar(50),
 	phone_number varchar(20),
@@ -32,6 +32,7 @@ create table Orders (
 	billing_address_id int references Address(id),
 	order_date datetime
 );
+
 
 create table Geometry (
 	id int primary key,
@@ -43,7 +44,7 @@ create table Geometry (
 	chamfer_width float,
 	side_length float,
 	width float,
-	height float,
+	length float,
 	file_link varchar(100),
 	dimension_accuracy float,
 	number_of_sides int
@@ -51,7 +52,6 @@ create table Geometry (
 
 create table MaterialProperty (
 	id int primary key,
-	reactivity varchar(20),
 	toxicity varchar(20),
 	m_type varchar(20),
 	max_temp float,
@@ -121,7 +121,9 @@ create table Surface (
 	id int primary key,
 	side_id int references Side(id),
 	s_type varchar(20),
-	surface_accuracy float,
+	surface_figure float,
+    surface_roughness float,
+    surface_quality varchar(10),
 	turning_angle float,
 	focal_length float,
 	radius_of_curvature float,
@@ -158,8 +160,8 @@ create table Spec (
 	s_min float,
 	s_max float,
 	polarisation float,
-	aoi_theta1 float,
-	aoi_theta2 float
+	aoi_min float,
+	aoi_max float
 );
 
 create table customer_supplied (
@@ -167,3 +169,8 @@ create table customer_supplied (
 	material_id int references MaterialProperty(id),
 	geometry_id int references Geometry(id)
 );
+
+
+
+
+
