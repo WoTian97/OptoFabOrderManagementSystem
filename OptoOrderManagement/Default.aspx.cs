@@ -85,11 +85,27 @@ namespace OptoOrderManagement
             String searchBy = TextBoxSearch.Text;
             String s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
             String temp = "";
+
             switch (ddStr)
             {
+                default:
+                    if (String.Compare(searchBy, "")!=0) {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Please select an option to search!');", true);
+                    }
+                    temp = s;
+                    break;
 
                 case "Order Number":
-                    temp = s+" WHERE id = "+searchBy;
+                    int oid = 0;
+                    try
+                    {
+                        oid = Convert.ToInt32(searchBy);
+                    }
+                    catch (Exception ex)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Please enter an integer as Order ID!');", true);
+                    }
+                    temp = s + " WHERE id = " + oid;
                     break;
 
                 case "Client First Name":
@@ -112,8 +128,6 @@ namespace OptoOrderManagement
                     temp = s + " WHERE o_status = '" + searchBy + "'";
                     break;
 
-                default:
-                    break;
             }
             LoadRecord(temp);
 

@@ -10,7 +10,7 @@
                 </td>
                 <td style="width: 188px">
         <asp:DropDownList ID="DropDownSearch" runat="server" Width="160px">
-            <asp:ListItem Text="Please select" Value =" "></asp:ListItem>
+            <asp:ListItem Text="Please Select" Value =" "></asp:ListItem>
             <asp:ListItem Value="Order Number"></asp:ListItem>
             <asp:ListItem Value="Client First Name"></asp:ListItem>
             <asp:ListItem Value="Client Last Name"></asp:ListItem>
@@ -27,7 +27,7 @@
                 </td>
                 <td style="width: 148px">
         <asp:DropDownList ID="DropDownSort" runat="server">
-            <asp:ListItem>Please select</asp:ListItem>
+            <asp:ListItem>Please Select</asp:ListItem>
             <asp:ListItem>Order Number</asp:ListItem>
             <asp:ListItem>Action Required</asp:ListItem>
             <asp:ListItem>Urgent</asp:ListItem>
