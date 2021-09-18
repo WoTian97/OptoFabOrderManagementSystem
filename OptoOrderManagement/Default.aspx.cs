@@ -157,5 +157,22 @@ namespace OptoOrderManagement
             }
             LoadRecord(temp);
         }
+
+        protected void gridview1_RowDataBound(object sender, GridViewRowEventArgs e)
+
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                
+                e.Row.Attributes.Add("onmouseover", "c=style.backgroundColor;style.backgroundColor='#d4e4fc'");
+                e.Row.Attributes.Add("onmouseout", "style.backgroundColor=c");
+                string SId = e.Row.Cells[0].Text;
+                e.Row.Attributes.Add("ondblclick", "location.href='Order.aspx?SId=" + SId + "'");
+                e.Row.Attributes["style"] = "Cursor:hand";
+            }
+
+
+        }
+
     }
 }
