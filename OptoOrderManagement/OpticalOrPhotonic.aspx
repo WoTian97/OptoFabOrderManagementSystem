@@ -28,6 +28,13 @@
         .auto-style9 {
             height: 20px;
         }
+        .auto-style10 {
+            width: 296px;
+            height: 22px;
+        }
+        .auto-style11 {
+            height: 22px;
+        }
     </style>
 </head>
 <body>
@@ -41,7 +48,7 @@
                         type1</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Spplier Type</td>
+                    <td class="auto-style2">Supplier Type</td>
                     <td class="auto-style3">
                         type2</td>
                 </tr>
@@ -61,14 +68,14 @@
                         Nonne</td>
                 </tr>
                 <tr>
-                    <td class="modal-sm" style="width: 296px">Quantity</td>
-                    <td>
+                    <td class="auto-style10">Quantity</td>
+                    <td class="auto-style11">
                         100</td>
                 </tr>
                 <tr>
-                    <td class="modal-sm" style="width: 296px">&nbsp;</td>
+                    <td class="modal-sm" style="width: 296px">Sides</td>
                     <td>
-                        &nbsp;</td>
+                        1, 2, 3</td>
                 </tr>
                 </table>
             </h3>
