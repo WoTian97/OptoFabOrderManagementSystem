@@ -33,99 +33,68 @@
     </style>
 </head>
 <body>
-     <h3 style="font-size: xx-large">&nbsp;&nbsp;&nbsp;Coating</h3>
+     <h3 style="font-size: xx-large">&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelCoating" runat="server" Text=""></asp:Label></h3>
         <div>
             <h3>&nbsp;<table class="nav-justified">
                 <tr>
                     <td class="modal-sm" style="width: 296px; height: 27px;">Coating Method</td>
                     <td style="height: 27px">
-                        None</td>
+                        <asp:Label ID="LabelCoatingMethod" runat="server" Text=""></asp:Label> 
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Coating Area Dimension</td>
                     <td class="auto-style3">
-                        None</td>
+                        <asp:Label ID="LabelCoatingAreaDimension" runat="server" Text=""></asp:Label> 
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Position</td>
                     <td class="auto-style3">
-                        None</td>
+                        <asp:Label ID="LabelPosition" runat="server" Text=""></asp:Label> 
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Compensation Coating</td>
                     <td class="auto-style3">
-                        None</td>
+                        <asp:Label ID="LabelCompensationCoating" runat="server" Text=""></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Protective Coating</td>
                     <td class="auto-style3">
-                        None</td>
+                        <asp:Label ID="LabelProtectiveCoating" runat="server" Text=""></asp:Label>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Deposition Process</td>
                     <td class="auto-style3">
-                        None</td>
+                        <asp:Label ID="LabelDepositionProcess" runat="server" Text=""></asp:Label>
+                    </td>
                 </tr>
                 </table>
             </h3>
         </div>
     <form id="form1" runat="server">
-        <div>
         <p>
             <strong>Layers</strong></p>
         <table>
-        <tr>
-            <td style="line-height: 35px" class="auto-style6"><strong>ID</strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong>Thickness Layer</strong></td>
-            <td style="line-height: 35px" class="auto-style7"><strong>Thickness Tolerance</strong></td>
-            <td style="line-height: 35px" class="auto-style8"><strong>Material</strong></td>
-            <td style="line-height: 35px"><strong>Refractive Index</strong></td>
-            <td style="line-height: 35px" class="auto-style4"><strong>Tolerance</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>Wave Length</strong></td>
-
-        </tr>
-        <tr>
-            <td style="line-height: 35px" class="auto-style6"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style7"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style8"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style4"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong></strong></td>
-
-        </tr>
+            <asp:GridView ID="GridViewLayers" runat="server" BorderColor="Silver" HorizontalAlign="Center" cellspacing="15" CellPadding="15">
+                <HeaderStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
+                <PagerStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                <RowStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:GridView>
         </table>
-
-        </div>
-    </form>
+    
         <p>
             <strong>Specifications</strong></p>
         <table>
-        <tr>
-            <td style="line-height: 35px" class="auto-style6"><strong>ID</strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong>Min WaveLength</strong></td>
-            <td style="line-height: 35px" class="auto-style7"><strong>Max WaveLength</strong></td>
-            <td style="line-height: 35px" class="auto-style8"><strong>Refle/Transm</strong></td>
-            <td style="line-height: 35px"><strong>Min</strong></td>
-            <td style="line-height: 35px" class="auto-style4"><strong>Max</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>Polarisation</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>aoi-min</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>aoi-max</strong></td>
-        </tr>
-
-        <tr>
-            <td style="line-height: 35px" class="auto-style6"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style7"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style8"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style4"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong></strong></td>
-        </tr>
-
+            <asp:GridView ID="GridViewSpecifications" runat="server" BorderColor="Silver" HorizontalAlign="Center" cellspacing="15" CellPadding="15">
+                <HeaderStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
+                <PagerStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                <RowStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:GridView>
         </table>
-
-        </body>
+    </form>
+    </body>
 </html>

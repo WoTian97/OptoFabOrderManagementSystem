@@ -84,13 +84,12 @@
         <p>
             <strong>Surfaces</strong></p>
         <table>
-        <div style="margin-left:auto; margin-right:auto;width:600px;">
             <asp:GridView ID="GridViewSurfaces" runat="server" BorderColor="Silver" HorizontalAlign="Center" cellspacing="15" CellPadding="15">
                 <HeaderStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
                 <PagerStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                 <RowStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
             </asp:GridView>
-        </div>
+        </table>
     </form>
     </body>
 </html>
