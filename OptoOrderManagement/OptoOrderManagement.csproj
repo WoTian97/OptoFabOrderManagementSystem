@@ -122,6 +122,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Coating.aspx" />
+    <Content Include="OpticalOrPhotonic.aspx" />
     <Content Include="Part.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -170,6 +172,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Side.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -178,6 +181,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Coating.aspx.cs">
+      <DependentUpon>Coating.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coating.aspx.designer.cs">
+      <DependentUpon>Coating.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OpticalOrPhotonic.aspx.cs">
+      <DependentUpon>OpticalOrPhotonic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OpticalOrPhotonic.aspx.designer.cs">
+      <DependentUpon>OpticalOrPhotonic.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Part.aspx.cs">
       <DependentUpon>Part.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +221,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Side.aspx.cs">
+      <DependentUpon>Side.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Side.aspx.designer.cs">
+      <DependentUpon>Side.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -6,10 +6,6 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 181px;
-            height: 26px;
-        }
         .auto-style2 {
             width: 296px;
             height: 26px;
@@ -21,17 +17,9 @@
             height: 22px;
             margin-left: 40px;
         }
-        .auto-style5 {
-            width: 183px;
-            height: 22px;
-        }
         .auto-style6 {
             width: 295px;
             height: 22px;
-        }
-        .auto-style7 {
-            width: 183px;
-            height: 20px;
         }
         .auto-style8 {
             width: 295px;
@@ -92,11 +80,6 @@
                 <tr>
                     <td class="modal-sm" style="width: 295px; font-weight: bold;">&nbsp;</td>
                     <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="modal-sm" style="width: 295px">Reactivity</td>
-                    <td>
-                        None</td>
                 </tr>
                 <tr>
                     <td class="modal-sm" style="width: 295px">Toxicity</td>
@@ -195,7 +178,7 @@
                         20</td>
                 </tr>
                 <tr>
-                    <td class="modal-sm" style="width: 295px">Heighth</td>
+                    <td class="modal-sm" style="width: 295px">Length</td>
                     <td>
                         20</td>
                 </tr>

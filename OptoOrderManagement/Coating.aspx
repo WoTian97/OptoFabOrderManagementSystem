@@ -109,8 +109,8 @@
             <td style="line-height: 35px"><strong>Min</strong></td>
             <td style="line-height: 35px" class="auto-style4"><strong>Max</strong></td>
             <td style="line-height: 35px" class="auto-style9"><strong>Polarisation</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>aoi-theta1</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>aoi-theta2</strong></td>
+            <td style="line-height: 35px" class="auto-style9"><strong>aoi-min</strong></td>
+            <td style="line-height: 35px" class="auto-style9"><strong>aoi-max</strong></td>
         </tr>
 
         <tr>

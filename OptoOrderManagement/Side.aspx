@@ -83,7 +83,7 @@
         <table>
         <tr>
             <td style="line-height: 35px" class="auto-style6"><strong>Type</strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong>Surface Accuracy</strong></td>
+            <td style="line-height: 35px" class="auto-style5"><strong>Surface Figure</strong></td>
             <td style="line-height: 35px" class="auto-style7"><strong>Turning Angle</strong></td>
             <td style="line-height: 35px" class="auto-style8"><strong>Focal Length</strong></td>
             <td style="line-height: 35px"><strong>Radius of Curvature</strong></td>
@@ -96,8 +96,9 @@
             <td style="line-height: 35px"><strong>a8</strong></td>
             <td style="line-height: 35px"><strong>a10</strong></td>
             <td style="line-height: 35px"><strong>a12</strong></td>
-            <td style="line-height: 35px"><strong>Form Accuracy</strong></td>
             <td style="line-height: 35px"><strong>File</strong></td>
+            <td style="line-height: 35px"><strong>Surface Roughness</strong></td>
+            <td style="line-height: 35px"><strong>Surface Quality</strong></td>
         </tr>
 
         <tr>
@@ -117,6 +118,7 @@
             <td style="line-height: 35px"><strong></strong></td>
             <td style="line-height: 35px"><strong></strong></td>
             <td style="line-height: 35px"><strong></strong></td>
+            <td style="line-height: 35px">&nbsp;</td>
         </tr>
 
         </table>
