@@ -75,7 +75,7 @@
                 <tr>
                     <td class="modal-sm" style="width: 296px">Sides</td>
                     <td>
-                        1, 2, 3</td>
+                        <a href="Side.aspx?id=1">1</a>, <a href="Side.aspx?id=2">2</a>, <a href="Side.aspx?id=3">3</a></td>
                 </tr>
                 </table>
             </h3>

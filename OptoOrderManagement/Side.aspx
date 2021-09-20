@@ -70,7 +70,7 @@
                 <tr>
                     <td class="auto-style2">Coatings</td>
                     <td class="auto-style3">
-                        1,2,3 (Here is hyperlinks to coating page)</td>
+                        <a href="Coating.aspx?id=1">1</a>, <a href="Coating.aspx?id=2">2</a>, <a href="Coating.aspx?id=3">3</a></td>
                 </tr>
                 </table>
             </h3>
