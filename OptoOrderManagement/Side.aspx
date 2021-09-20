@@ -54,23 +54,26 @@
 <body>
     <form id="form1" runat="server">
         <div>
-     <h3 style="font-size: xx-large">&nbsp;&nbsp;&nbsp;Side 1</h3>
+     <h3 style="font-size: xx-large">&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelSide" runat="server" Text=""></asp:Label></h3>
         <div>
             <h3>&nbsp;<table class="nav-justified">
                 <tr>
                     <td class="modal-sm" style="width: 296px; height: 27px;">Description of Face</td>
                     <td style="height: 27px">
-                        None</td>
+                        <asp:Label ID="LabelDescription" runat="server" Text=""></asp:Label> 
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Polygonal/Extruded</td>
                     <td class="auto-style3">
-                        None</td>
+                        <asp:Label ID="LabelPolygonal" runat="server" Text=""></asp:Label> 
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">Coatings</td>
                     <td class="auto-style3">
-                        <a href="Coating.aspx?id=1">1</a>, <a href="Coating.aspx?id=2">2</a>, <a href="Coating.aspx?id=3">3</a></td>
+                        <div id="div_coatings" runat="server"></div>
+                    </td>
                 </tr>
                 </table>
             </h3>
@@ -81,48 +84,13 @@
         <p>
             <strong>Surfaces</strong></p>
         <table>
-        <tr>
-            <td style="line-height: 35px" class="auto-style6"><strong>Type</strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong>Surface Figure</strong></td>
-            <td style="line-height: 35px" class="auto-style7"><strong>Turning Angle</strong></td>
-            <td style="line-height: 35px" class="auto-style8"><strong>Focal Length</strong></td>
-            <td style="line-height: 35px"><strong>Radius of Curvature</strong></td>
-            <td style="line-height: 35px" class="auto-style4"><strong>CV</strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong>k</strong></td>
-            <td style="line-height: 35px"><strong>a1</strong></td>
-            <td style="line-height: 35px"><strong>a2</strong></td>
-            <td style="line-height: 35px"><strong>a4</strong></td>
-            <td style="line-height: 35px"><strong>a6</strong></td>
-            <td style="line-height: 35px"><strong>a8</strong></td>
-            <td style="line-height: 35px"><strong>a10</strong></td>
-            <td style="line-height: 35px"><strong>a12</strong></td>
-            <td style="line-height: 35px"><strong>File</strong></td>
-            <td style="line-height: 35px"><strong>Surface Roughness</strong></td>
-            <td style="line-height: 35px"><strong>Surface Quality</strong></td>
-        </tr>
-
-        <tr>
-            <td style="line-height: 35px" class="auto-style6"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style5"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style7"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style8"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style4"><strong></strong></td>
-            <td style="line-height: 35px" class="auto-style9"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px"><strong></strong></td>
-            <td style="line-height: 35px">&nbsp;</td>
-        </tr>
-
-        </table>
-
+        <div style="margin-left:auto; margin-right:auto;width:600px;">
+            <asp:GridView ID="GridViewSurfaces" runat="server" BorderColor="Silver" HorizontalAlign="Center" cellspacing="15" CellPadding="15">
+                <HeaderStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
+                <PagerStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                <RowStyle Font-Size="Medium" HorizontalAlign="Center" VerticalAlign="Middle" />
+            </asp:GridView>
+        </div>
     </form>
     </body>
 </html>
