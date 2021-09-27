@@ -78,8 +78,8 @@
                     <asp:ListItem>Waiting for external vendor</asp:ListItem>
                     <asp:ListItem>Fabrication complete</asp:ListItem>
                     <asp:ListItem>Shipped</asp:ListItem>
-                    <asp:ListItem>Order complete</asp:ListItem>
                     <asp:ListItem>Partially complete</asp:ListItem>
+                    <asp:ListItem>Order complete</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
@@ -91,6 +91,11 @@
                     <asp:ListItem>N/A</asp:ListItem>
                     <asp:ListItem>No payment received</asp:ListItem>
                     <asp:ListItem>No charge</asp:ListItem>
+                    <asp:ListItem>Invoice sent</asp:ListItem>
+                    <asp:ListItem>Engineering development</asp:ListItem>
+                    <asp:ListItem>Collaborative credit</asp:ListItem>
+                    <asp:ListItem>Prepaid</asp:ListItem>
+                    <asp:ListItem>Payment received</asp:ListItem>
                     <asp:ListItem>Progress payment 1</asp:ListItem>
                     <asp:ListItem>Progress payment 2</asp:ListItem>
                     <asp:ListItem>Progress payment 3</asp:ListItem>
@@ -101,11 +106,6 @@
                     <asp:ListItem>Progress payment 8</asp:ListItem>
                     <asp:ListItem>Progress payment 9</asp:ListItem>
                     <asp:ListItem>Progress payment 10</asp:ListItem>
-                    <asp:ListItem>Invoice sent</asp:ListItem>
-                    <asp:ListItem>Payment received</asp:ListItem>
-                    <asp:ListItem>Engineering development</asp:ListItem>
-                    <asp:ListItem>Collaborative credit</asp:ListItem>
-                    <asp:ListItem>Prepaid</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>

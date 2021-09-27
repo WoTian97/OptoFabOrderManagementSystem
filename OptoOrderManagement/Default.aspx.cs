@@ -141,11 +141,27 @@ namespace OptoOrderManagement
             String temp = "";
             switch (ddStr)
             {
-
-                case "Order Number":
-                    temp = s + " WHERE id LIKE '%" + searchBy + "%'";
+                default:
+                    if (String.Compare(searchBy, "") != 0)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Please select an option to search!');", true);
+                    }
+                    temp = s;
                     break;
 
+                case "Order Number":
+                    int oid = 0;
+                    try
+                    {
+                        oid = Convert.ToInt32(searchBy);
+                    }
+                    catch (Exception ex)
+                    {
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Please enter an integer as Order ID!');", true);
+                    }
+                    temp = s + " WHERE id LIKE '%" + searchBy + "%'";
+                    break;
+              
                 case "Client First Name":
                     temp = s + " WHERE first_name LIKE '%" + searchBy + "%'";
                     break;
@@ -166,8 +182,6 @@ namespace OptoOrderManagement
                     temp = s + " WHERE o_status LIKE '%" + searchBy + "%'";
                     break;
 
-                default:
-                    break;
             }
             LoadRecord(temp);
         }

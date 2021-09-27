@@ -68,8 +68,8 @@
             <td class="modal-sm" style="width: 296px">
                 Part Description</td>
             <td>
+                <asp:TextBox ID="TextBox1" runat="server" Height="74px" TextMode="MultiLine" Width="281px"></asp:TextBox>
                 <br />
-                <asp:Label ID="LabelTime" runat="server" Text="Label"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -96,12 +96,12 @@
                 </td>
         </tr>
         <tr>
-            <td style="width: 181px; height: 26px;">&nbsp;</td>
-            <td class="modal-sm" style="width: 296px; height: 26px;">
+            <td style="width: 181px; height: 25px;"></td>
+            <td class="modal-sm" style="width: 296px; height: 25px;">
                 <a href="OpticalOrPhotonic.aspx">Optical or Photonic</a>
             </td>
-            <td style="height: 26px">
-                &nbsp;</td>
+            <td style="height: 25px">
+                </td>
         </tr>
         <tr>
             <td style="width: 181px; height: 26px;">&nbsp;</td>
