@@ -18,12 +18,15 @@ namespace OptoOrderManagement
 
             if (!this.IsPostBack)
             {
+                //Initiate the table of all orders as default
                 String s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
                 LoadRecord(s);
             }
             
         }
         string constr = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+
+        //Use GridView to store the data from db
         void LoadRecord(String para_sql)
         {
             using (MySqlConnection con = new MySqlConnection(constr))
@@ -72,6 +75,7 @@ namespace OptoOrderManagement
                     s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders ORDER BY order_date";
                     break;
 
+                //Sort orders by order number as default
                 default:
                     s = "SELECT id as 'Order ID', action_required as 'Action Required', action_description as 'Action Description', urgent as 'Urgent', o_priority as 'Priority', o_status as 'Status', order_description as 'Order Description', payment_status as 'Payment Status', cost as 'Cost', tracking_number as 'Tracking Number', first_name as 'Client First Name', last_name as 'Client Last Name', company_name as 'Organisation', phone_number as 'Phone Number', order_date as 'Time Stamp' FROM Orders";
                     break;
@@ -89,14 +93,17 @@ namespace OptoOrderManagement
             switch (ddStr)
             {
                 default:
+                    //If the searchBy TextBox is not empty but the dropdown is, handle error
                     if (String.Compare(searchBy, "")!=0) {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Please select an option to search!');", true);
                     }
+                    //else we show default order table
                     temp = s;
                     break;
 
                 case "Order Number":
                     int oid = 0;
+                    //if the order ID is not a number, handle error
                     try
                     {
                         oid = Convert.ToInt32(searchBy);
@@ -133,6 +140,7 @@ namespace OptoOrderManagement
 
         }
 
+        // Use LIKE to implement fuzzy seach. Similar logic as ButtonSearch_Click
         protected void ButtonFuzzy_Click(object sender, EventArgs e)
         {
             String ddStr = DropDownSearch.Items[DropDownSearch.SelectedIndex].Value;
@@ -186,12 +194,13 @@ namespace OptoOrderManagement
             LoadRecord(temp);
         }
 
+        // use RowDataBound to react to mouse click and jump to the Order page
         protected void gridview1_RowDataBound(object sender, GridViewRowEventArgs e)
 
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                
+                // change row color on mouse over
                 e.Row.Attributes.Add("onmouseover", "c=style.backgroundColor;style.backgroundColor='#d4e4fc'");
                 e.Row.Attributes.Add("onmouseout", "style.backgroundColor=c");
                 string SId = e.Row.Cells[0].Text;

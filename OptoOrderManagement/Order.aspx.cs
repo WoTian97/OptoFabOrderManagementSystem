@@ -19,6 +19,7 @@ namespace OptoOrderManagement
 
             if (!this.IsPostBack)
             {
+                //receive the order ID from Default page
                 int sid = Convert.ToInt32(Request.QueryString["SId"]);
                 LoadRecord(sid);
             }
@@ -26,6 +27,8 @@ namespace OptoOrderManagement
         }
 
         string constr = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+
+        //load order information according to the order ID
         void LoadRecord(int i)
         {
             String para_sql = "SELECT id, part_description as 'Part Description', action_required as 'Action Required', urgent as 'Urgent', p_priority as 'Priority', p_status as 'Status' FROM Part where order_id =" + i;
@@ -89,6 +92,7 @@ namespace OptoOrderManagement
 
         }
 
+        //An SQL executer as a help function
         String getInfo(String query)
         {
             
@@ -107,7 +111,7 @@ namespace OptoOrderManagement
             }
         }
 
-
+        //help function, common part to update information in any kind of update button
         void buttonUp(String query)
         {
             using (MySqlConnection con = new MySqlConnection(constr))
@@ -160,11 +164,13 @@ namespace OptoOrderManagement
             buttonUp(q);
         }
 
+        //back to home WITHOUT saving any changes on the current page!
         protected void ButtonHome_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
         }
 
+        //use RowDataBound to react to mouse click and jump to the Part page
         protected void gridview1_RowDataBound(object sender, GridViewRowEventArgs e)
 
         {
